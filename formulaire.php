@@ -39,7 +39,12 @@
 		echo "Le fichier est présent" . "<br>";
 	}
 
-
+	if (empty($_POST['classe'])) { // Champs de la Classe
+		echo "Erreur de classe" . "<br>";
+	}
+	else {
+		echo "Classe conforme" . "<br>";
+	}
 
 	$df= fopen('/home/a-derchain/Bureau/liste.pdf','w');  //Met les informations dans un pdf
 	fwrite($df,$_POST['lname'].", ".$_POST['fname'].", ".$_POST['age'].", "
